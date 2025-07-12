@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صابون طبيعي علاجي - علاج حب الشباب والرؤوس السوداء</title>
+    <meta name="description" content="صابون طبيعي 100% لعلاج حب الشباب والرؤوس السوداء، مصنوع من زيت الزيتون، زيت شجرة الشاي، الكبريت والجلسرين">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-olive {
+            background-color: #6B8E23;
+        }
+        .text-olive {
+            color: #6B8E23;
+        }
+        .border-olive {
+            border-color: #6B8E23;
+        }
+        .bg-gold {
+            background-color: #D4AF37;
+        }
+        .text-gold {
+            color: #D4AF37;
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+        .bubble {
+            position: absolute;
+            background-color: rgba(214, 175, 55, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .soap-bubbles {
+            position: relative;
+            overflow: hidden;
+        }
+        .soap-bubble {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            opacity: 0;
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .wave .shape-fill {
+            fill: #F9FAFB;
+        }
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover .feature-icon {
+            transform: rotate(15deg) scale(1.1);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(107, 142, 35, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(107, 142, 35, 0.8);
+        }
+        .header {
+            transition: all 0.3s ease;
+        }
+        .header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+    <!-- Floating Bubbles Background -->
+    <div class="fixed inset-0 overflow-hidden z-0">
+        <div id="bubbles-container"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header fixed w-full bg-white shadow-md py-4 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-olive animate__animated animate__fadeInDown">صابوني الطبيعي</div>
+            <button id="orderBtn" class="bg-olive hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105 animate__animated animate__fadeInDown animate__delay-1s">
+                اطلب الآن
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 soap-bubbles">
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 animate__animated animate__fadeInRight">
+                    وداعًا لحب الشباب والرؤوس السوداء مع <span class="text-olive">صابوننا الطبيعي</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 animate__animated animate__fadeInRight animate__delay-1s">
+                    صابون علاجي طبيعي 100% مصنوع من مكونات فعالة مثل زيت الزيتون، زيت شجرة الشاي، الكبريت والجلسرين لتنظيف عميق وعلاج فعال لمشاكل البشرة.
+                </p>
+                <ul class="mb-8 space-y-3">
+                    <li class="flex items-center animate__animated animate__fadeInRight animate__delay-1s">
+                        <div class="feature-icon bg-olive text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        يقلل من حب الشباب والالتهابات
+                    </li>
+                    <li class="flex items-center animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="feature-icon bg-olive text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        يزيل الرؤوس السوداء وينظف المسام
+                    </li>
+                    <li class="flex items-center animate__animated animate__fadeInRight animate__delay-3s">
+                        <div class="feature-icon bg-olive text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        مكونات طبيعية 100% آمنة للبشرة
+                    </li>
+                </ul>
+                <button id="heroOrderBtn" class="bg-olive hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg btn-glow animate__animated animate__pulse animate__infinite animate__slower">
+                    اطلب الآن - فقط 49 ر.س
+                </button>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="relative">
+                    <img src="sapon.jpg" alt="صابون طبيعي علاجي" class="rounded-lg shadow-xl w-full max-w-md float-animation z-10 relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-olive to-gold rounded-xl opacity-20 blur-lg animate-pulse"></div>
+                    
+                    <!-- Floating ingredients icons around the soap -->
+                    <div class="absolute -top-8 -right-8 bg-white p-3 rounded-full shadow-lg animate__animated animate__fadeInRight animate__delay-1s">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1830/1830839.png" alt="زيت الزيتون" class="w-10 h-10">
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 bg-white p-3 rounded-full shadow-lg animate__animated animate__fadeInLeft animate__delay-2s">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2509/2509633.png" alt="زيت شجرة الشاي" class="w-10 h-10">
+                    </div>
+                    <div class="absolute top-1/4 -left-12 bg-white p-3 rounded-full shadow-lg animate__animated animate__fadeInUp animate__delay-3s">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2503/2503659.png" alt="الجلسرين" class="w-10 h-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-20 left-1/4 w-40 h-40 rounded-full bg-olive filter blur-xl"></div>
+            <div class="absolute bottom-20 right-1/4 w-60 h-60 rounded-full bg-gold filter blur-xl"></div>
+        </div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 animate__animated animate__fadeIn">كيفية استخدام الصابون</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 p-6 rounded-lg shadow-sm text-center hover:bg-white transition duration-300 transform hover:-translate-y-2 fade-in delay-100">
+                    <div class="bg-olive text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold transition duration-300">1</div>
+                    <h3 class="text-xl font-semibold mb-3 text-olive">بلل وجهك</h3>
+                    <p class="text-gray-600">بلل وجهك بالماء الفاتر لفتح المسام</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-6 rounded-lg shadow-sm text-center hover:bg-white transition duration-300 transform hover:-translate-y-2 fade-in delay-300">
+                    <div class="bg-olive text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold transition duration-300">2</div>
+                    <h3 class="text-xl font-semibold mb-3 text-olive">ضع الصابون</h3>
+                    <p class="text-gray-600">ضع الصابون على اليدين وافركها حتى تتكون رغوة</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-6 rounded-lg shadow-sm text-center hover:bg-white transition duration-300 transform hover:-translate-y-2 fade-in delay-500">
+                    <div class="bg-olive text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold transition duration-300">3</div>
+                    <h3 class="text-xl font-semibold mb-3 text-olive">دلك وجهك</h3>
+                    <p class="text-gray-600">دلك وجهك برفق لمدة دقيقة ثم اشطفه جيدًا</p>
+                </div>
+            </div>
+            <div class="mt-12 bg-gray-100 p-6 rounded-lg border-l-4 border-olive fade-in delay-700">
+                <h3 class="text-xl font-semibold mb-3 text-olive flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    نصيحة خبرائنا:
+                </h3>
+                <p class="text-gray-600">استخدم الصابون مرتين يوميًا (صباحًا ومساءً) للحصول على أفضل النتائج خلال أسبوعين.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 animate__animated animate__fadeIn">آراء عملائنا</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm fade-in delay-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-olive text-white w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold animate__animated animate__bounceIn">م</div>
+                        <div class="mr-3">
+                            <h4 class="font-semibold">محمد السعد</h4>
+                            <p class="text-gray-500 text-sm">الرياض</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"بعد أسبوعين من الاستخدام لاحظت اختفاء الرؤوس السوداء تمامًا، والبشرة أصبحت أنعم وأكثر نضارة."</p>
+                    <div class="flex mt-3 text-gold">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm fade-in delay-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-olive text-white w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold animate__animated animate__bounceIn">ن</div>
+                        <div class="mr-3">
+                            <h4 class="font-semibold">نورة الفهد</h4>
+                            <p class="text-gray-500 text-sm">جدة</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"الصابون ساعد في تقليل حب الشباب بشكل ملحوظ، وأحب أنه طبيعي ولا يسبب أي تهيج للبشرة الحساسة."</p>
+                    <div class="flex mt-3 text-gold">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm fade-in delay-500">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-olive text-white w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold animate__animated animate__bounceIn">ف</div>
+                        <div class="mr-3">
+                            <h4 class="font-semibold">فاطمة علي</h4>
+                            <p class="text-gray-500 text-sm">الدمام</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"رائحته جميلة ومكوناته طبيعية، لاحظت تحسن في نضارة البشرة بعد أسبوع واحد فقط من الاستخدام."</p>
+                    <div class="flex mt-3 text-gold">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="orderForm" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-1/3 left-1/4 w-60 h-60 rounded-full bg-olive filter blur-xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-40 h-40 rounded-full bg-gold filter blur-xl animate-pulse"></div>
+        </div>
+        <div class="container mx-auto px-4 max-w-2xl relative">
+            <div class="bg-gray-50 rounded-lg shadow-xl p-6 md:p-8 transform transition duration-500 hover:shadow-2xl">
+                <h2 class="text-2xl font-bold text-center mb-6 text-olive animate__animated animate__fadeInDown">اطلب صابونك الآن</h2>
+                <p class="text-center text-gray-600 mb-8 animate__animated animate__fadeInDown animate__delay-1s">املأ النموذج وسنتصل بك لتأكيد الطلب</p>
+                
+                <form id="orderFormElement" class="space-y-6">
+                    <div class="animate__animated animate__fadeInLeft animate__delay-2s">
+                        <label for="fullName" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
+                        <input type="text" id="fullName" name="fullName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-olive focus:border-transparent transition duration-300" required>
+                        <div id="fullNameError" class="text-red-500 text-sm mt-1 hidden">الرجاء إدخال الاسم الكامل</div>
+                    </div>
+                    
+                    <div class="animate__animated animate__fadeInLeft animate__delay-3s">
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">رقم الجوال</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-olive focus:border-transparent transition duration-300" required>
+                        <div id="phoneError" class="text-red-500 text-sm mt-1 hidden">الرجاء إدخال رقم جوال صحيح (مثال: 7XXXXXXXX)</div>
+                    </div>
+                    
+                    <div class="animate__animated animate__fadeInLeft animate__delay-4s">
+                        <label for="address" class="block text-gray-700 font-medium mb-2">العنوان</label>
+                        <textarea id="address" name="address" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-olive focus:border-transparent transition duration-300" required></textarea>
+                        <div id="addressError" class="text-red-500 text-sm mt-1 hidden">الرجاء إدخال العنوان</div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-olive hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105 btn-glow animate__animated animate__fadeInUp animate__delay-5s">
+                        تأكيد الطلب
+                    </button>
+                </form>
+                
+                <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded animate__animated animate__fadeIn">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <p class="font-bold">شكرًا لك!</p>
+                            <p>تم استلام طلبك بنجاح، سنتصل بك خلال 24 ساعة لتأكيد التفاصيل.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 animate__animated animate__fadeInLeft">
+                    <div class="text-2xl font-bold text-olive mb-2">صابوني الطبيعي</div>
+                    <p class="text-gray-400">صابون علاجي طبيعي 100% لعلاج حب الشباب والرؤوس السوداء</p>
+                </div>
+                <div class="flex space-x-4 space-x-reverse animate__animated animate__fadeInRight">
+                    <a href="https://wa.me/967735858588" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full transition duration-300 transform hover:scale-110">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 animate__animated animate__fadeIn">
+                <p>© <span id="currentYear"></span> صابوني الطبيعي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Create floating bubbles
+            function createBubbles() {
+                const container = document.getElementById('bubbles-container');
+                const colors = ['rgba(214, 175, 55, 0.1)', 'rgba(107, 142, 35, 0.1)'];
+                
+                for (let i = 0; i < 20; i++) {
+                    const bubble = document.createElement('div');
+                    bubble.classList.add('bubble');
+                    
+                    // Random size between 20 and 100px
+                    const size = Math.random() * 80 + 20;
+                    bubble.style.width = `${size}px`;
+                    bubble.style.height = `${size}px`;
+                    
+                    // Random position
+                    bubble.style.left = `${Math.random() * 100}%`;
+                    bubble.style.top = `${Math.random() * 100}%`;
+                    
+                    // Random color
+                    bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    // Random animation
+                    const duration = Math.random() * 20 + 10;
+                    const delay = Math.random() * 5;
+                    bubble.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                    
+                    container.appendChild(bubble);
+                }
+            }
+            
+            createBubbles();
+            
+            // Create soap bubbles animation
+            function createSoapBubbles() {
+                const container = document.querySelector('.soap-bubbles');
+                
+                setInterval(() => {
+                    const bubble = document.createElement('div');
+                    bubble.classList.add('soap-bubble');
+                    
+                    // Random size between 10 and 30px
+                    const size = Math.random() * 20 + 10;
+                    bubble.style.width = `${size}px`;
+                    bubble.style.height = `${size}px`;
+                    
+                    // Random position at bottom
+                    bubble.style.left = `${Math.random() * 100}%`;
+                    bubble.style.bottom = '-30px';
+                    
+                    // Random animation duration
+                    const duration = Math.random() * 10 + 5;
+                    
+                    // Animate bubble
+                    bubble.style.transition = `all ${duration}s linear`;
+                    bubble.style.opacity = '0.7';
+                    
+                    // Random horizontal movement
+                    const horizontalMove = (Math.random() - 0.5) * 100;
+                    
+                    setTimeout(() => {
+                        bubble.style.transform = `translateY(-100vh) translateX(${horizontalMove}px)`;
+                        bubble.style.opacity = '0';
+                    }, 10);
+                    
+                    // Remove bubble after animation
+                    setTimeout(() => {
+                        bubble.remove();
+                    }, duration * 1000);
+                    
+                    container.appendChild(bubble);
+                }, 800);
+            }
+            
+            createSoapBubbles();
+            
+            // Header scroll effect
+            const header = document.querySelector('.header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Scroll to order form when buttons are clicked
+            const orderButtons = [document.getElementById('orderBtn'), document.getElementById('heroOrderBtn')];
+            const orderForm = document.getElementById('orderForm');
+            
+            orderButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        orderForm.scrollIntoView({ behavior: 'smooth' });
+                    });
+                }
+            });
+            
+            // Form validation
+            const form = document.getElementById('orderFormElement');
+            const successMessage = document.getElementById('successMessage');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Reset errors
+                document.querySelectorAll('[id$="Error"]').forEach(el => {
+                    el.classList.add('hidden');
+                });
+                
+                let isValid = true;
+                
+                // Validate full name
+                const fullName = document.getElementById('fullName');
+                if (!fullName.value.trim()) {
+                    document.getElementById('fullNameError').classList.remove('hidden');
+                    fullName.focus();
+                    isValid = false;
+                }
+                
+                // Validate phone (Saudi format)
+                const phone = document.getElementById('phone');
+                const phoneRegex = /^(7)(5|0|3|6|4|9|1|8|7|2)([0-9]{7})$/;
+                if (!phoneRegex.test(phone.value.trim())) {
+                    document.getElementById('phoneError').classList.remove('hidden');
+                    if (isValid) phone.focus();
+                    isValid = false;
+                }
+                
+                // Validate address
+                const address = document.getElementById('address');
+                if (!address.value.trim()) {
+                    document.getElementById('addressError').classList.remove('hidden');
+                    if (isValid) address.focus();
+                    isValid = false;
+                }
+                
+                // If valid, show success message
+                if (isValid) {
+                    form.reset();
+                    form.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    
+                    // Add animation to success message
+                    successMessage.classList.add('animate__animated', 'animate__fadeIn');
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // In a real scenario, you would send the form data to a server here
+                    // For example:
+                    // fetch('/submit-order', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json',
+                    //     },
+                    //     body: JSON.stringify({
+                    //         fullName: fullName.value,
+                    //         phone: phone.value,
+                    //         address: address.value
+                    //     }),
+                    // })
+                    // .then(response => response.json())
+                    // .then(data => {
+                    //     console.log('Success:', data);
+                    //     form.reset();
+                    //     form.classList.add('hidden');
+                    //     successMessage.classList.remove('hidden');
+                    //     successMessage.scrollIntoView({ behavior: 'smooth' });
+                    // })
+                    // .catch((error) => {
+                    //     console.error('Error:', error);
+                    // });
+                }
+            });
+            
+            // Animate elements when they come into view
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+    </script>
+</body>
+</html>
