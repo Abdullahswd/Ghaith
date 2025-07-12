@@ -145,26 +145,36 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <!-- Header -->
-    <header class="header fixed w-full bg-white shadow-md py-4 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-olive">صابوني الطبيعي</div>
-            <div class="flex items-center space-x-4 space-x-reverse">
-                <div class="hidden md:flex items-center bg-yellow-50 px-3 py-1 rounded-full">
-                    <svg class="w-5 h-5 text-yellow-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span class="text-sm font-medium text-yellow-700" id="countdown">العرض ينتهي خلال 14:59:33</span>
-                </div>
-                <button id="orderBtn"
-                    class="bg-olive hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">
-                    اطلب الآن
-                </button>
-            </div>
+<!-- Header -->
+<header class="header fixed w-full bg-white shadow-md py-4 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        
+        <!-- شعار + اسم -->
+        <div class="flex items-center space-x-3 space-x-reverse">
+            <!-- الشعار -->
+            <img src="my_logo.png" alt="ندى الطبيعة" class="h-10 w-auto">
+            <!-- الاسم -->
+            <div class="text-2xl font-bold text-olive">ندى الطبيعة</div>
         </div>
-    </header>
+
+        <!-- العداد والزر -->
+        <div class="flex items-center space-x-4 space-x-reverse">
+            <div class="hidden md:flex items-center bg-yellow-50 px-3 py-1 rounded-full">
+                <svg class="w-5 h-5 text-yellow-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-sm font-medium text-yellow-700" id="countdown">العرض ينتهي خلال 14:59:33</span>
+            </div>
+            <button id="orderBtn"
+                class="bg-olive hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                اطلب الآن
+            </button>
+        </div>
+    </div>
+</header>
+
 
     <!-- Hero Section -->
     <section class="pt-32 pb-16">
