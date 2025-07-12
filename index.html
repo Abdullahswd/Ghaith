@@ -429,8 +429,7 @@
                 </div>
                 <div class="md:w-1/2">
                     <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                        <img src="one_image.jpg"
-                            alt="تنظيف المسام" class="rounded-lg w-full">
+                        <img src="one_image.jpg" alt="تنظيف المسام" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
@@ -444,8 +443,7 @@
                 </div>
                 <div class="md:w-1/2">
                     <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                        <img src="tow_image.jpg"
-                            alt="تقليل الالتهابات" class="rounded-lg w-full">
+                        <img src="tow_image.jpg" alt="تقليل الالتهابات" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
@@ -460,8 +458,7 @@
                 </div>
                 <div class="md:w-1/2">
                     <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                        <img src="three_image.jpeg"
-                            alt="ترطيب البشرة" class="rounded-lg w-full">
+                        <img src="three_image.jpeg" alt="ترطيب البشرة" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
@@ -848,40 +845,55 @@
         <div class="container mx-auto px-4">
             <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
                 <div class="md:flex">
-                    <div class="md:w-1/2 bg-gradient-to-br from-olive to-green-700 text-white p-8 md:p-12">
+                    <div class="md:w-1/2 bg-gradient-to-br from-olive to-green-700 text-black p-8 md:p-12">
                         <h2 class="text-3xl font-bold mb-6">خصم 50% ينتهي قريبًا!</h2>
 
                         <!-- Countdown Timer -->
                         <div class="bg-black bg-opacity-20 rounded-lg p-6 mb-8">
                             <h3 class="text-xl font-medium mb-4 text-center">باقي على انتهاء العرض:</h3>
-                            <div class="flex justify-center space-x-4 space-x-reverse">
+
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <!-- ساعات -->
                                 <div class="text-center">
-                                    <div class="bg-black bg-opacity-30 text-3xl font-bold rounded-lg py-3 px-4 w-20"
-                                        id="countdown-hours">14</div>
+                                    <div class="bg-black bg-opacity-30 text-3xl font-bold rounded-lg py-3 px-6 w-24">
+                                        <span id="countdown-hours">14</span>
+                                    </div>
                                     <div class="text-sm mt-2">ساعات</div>
                                 </div>
-                                <div class="text-3xl font-bold pt-3">:</div>
+
+                                <!-- فاصل -->
+                                <div class="text-3xl font-bold hidden sm:block pt-3">:</div>
+
+                                <!-- دقائق -->
                                 <div class="text-center">
-                                    <div class="bg-black bg-opacity-30 text-3xl font-bold rounded-lg py-3 px-4 w-20"
-                                        id="countdown-minutes">59</div>
+                                    <div class="bg-black bg-opacity-30 text-3xl font-bold rounded-lg py-3 px-6 w-24">
+                                        <span id="countdown-minutes">59</span>
+                                    </div>
                                     <div class="text-sm mt-2">دقائق</div>
                                 </div>
-                                <div class="text-3xl font-bold pt-3">:</div>
+
+                                <!-- فاصل -->
+                                <div class="text-3xl font-bold hidden sm:block pt-3">:</div>
+
+                                <!-- ثواني -->
                                 <div class="text-center">
-                                    <div class="bg-black bg-opacity-30 text-3xl font-bold rounded-lg py-3 px-4 w-20"
-                                        id="countdown-seconds">33</div>
+                                    <div class="bg-black bg-opacity-30 text-3xl font-bold rounded-lg py-3 px-6 w-24">
+                                        <span id="countdown-seconds">33</span>
+                                    </div>
                                     <div class="text-sm mt-2">ثواني</div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Price -->
-                        <div class="flex items-center justify-center mb-6">
+                        <div
+                            class="flex flex-col sm:flex-row items-center justify-center mb-6 space-y-2 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
                             <span class="text-5xl font-bold">49 ر.س</span>
-                            <span class="text-2xl text-gray-300 mx-4 line-through">98 ر.س</span>
+                            <span class="text-2xl text-gray-300 line-through">98 ر.س</span>
                             <span class="bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">وفر
                                 50%</span>
                         </div>
+
 
                         <!-- Stock Left -->
                         <div
@@ -985,16 +997,11 @@
                         </div>
 
                         <div class="mt-8 flex items-center justify-center space-x-4 space-x-reverse">
-                            <img src="hasip.png" alt="وسيلة دفع 1"
-                                class="h-10 w-10 object-contain rounded">
-                            <img src="cash.png" alt="وسيلة دفع 2"
-                                class="h-10 w-10 object-contain rounded">
-                            <img src="jaip.jpeg" alt="وسيلة دفع 3"
-                                class="h-10 w-10 object-contain rounded">
-                            <img src="one_cash.png" alt="وسيلة دفع 4"
-                                class="h-10 w-10 object-contain rounded">
-                            <img src="qasemi.png" alt="وسيلة دفع 5"
-                                class="h-10 w-10 object-contain rounded">
+                            <img src="hasip.png" alt="وسيلة دفع 1" class="h-10 w-10 object-contain rounded">
+                            <img src="cash.png" alt="وسيلة دفع 2" class="h-10 w-10 object-contain rounded">
+                            <img src="jaip.jpeg" alt="وسيلة دفع 3" class="h-10 w-10 object-contain rounded">
+                            <img src="one_cash.png" alt="وسيلة دفع 4" class="h-10 w-10 object-contain rounded">
+                            <img src="qasemi.png" alt="وسيلة دفع 5" class="h-10 w-10 object-contain rounded">
                         </div>
 
                     </div>
